@@ -1,0 +1,4 @@
+a view is only uxml and binds to a viewmodel and always renders whatever is stored in the viewmodel. 
+
+The viewmodel sends user interaction events to the model or handles them. 
+

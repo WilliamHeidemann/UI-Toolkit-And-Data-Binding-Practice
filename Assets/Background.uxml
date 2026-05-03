@@ -1,0 +1,3 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Images/wowscrnshot_082619_071825.jpg?fileID=2800000&amp;guid=7a928a64437b64a8f8c806c160c9a58a&amp;type=3#wowscrnshot_082619_071825&quot;);"/>
+</ui:UXML>
