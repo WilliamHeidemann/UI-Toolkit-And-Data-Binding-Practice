@@ -1,10 +1,11 @@
 using System.Linq;
-using Configs;
-using Models;
+using Model;
+using Model.Configs;
+using Presentation;
 using UnityEngine;
-using Views;
+using View;
 
-namespace Presenters
+namespace ViewModel
 {
     public class EntryPoint : MonoBehaviour
     {
@@ -15,8 +16,8 @@ namespace Presenters
         private void Start()
         {
             Inventory inventory = new Inventory(_bagConfigs);
-            InventoryPresenter presenter = new(_inventoryView, inventory);
-            _inventoryView.Bind(inventory);
+            InventoryPresenter presenter = new();
+            presenter.Bind(_inventoryView, inventory);
             
             _itemConfigs
                 .Select(itemConfig => new Item(itemConfig))

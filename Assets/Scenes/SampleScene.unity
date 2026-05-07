@@ -501,6 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Views.BagView
   _inventory: {fileID: 1188677219}
+  _bag: {fileID: 9197481963319205126, guid: 464207b2fdcaa45a981be690ce121a24, type: 3}
 --- !u!1 &1392844359
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,9 +604,9 @@ MonoBehaviour:
   _inventoryView: {fileID: 1188677220}
   _bagConfigs:
   - {fileID: 11400000, guid: 53843b7742ea74f358ae57f2320c3bdf, type: 2}
+  - {fileID: 11400000, guid: 8ea0a4147a33c4eae926ca9517f5d601, type: 2}
   - {fileID: 11400000, guid: 53843b7742ea74f358ae57f2320c3bdf, type: 2}
-  - {fileID: 11400000, guid: 53843b7742ea74f358ae57f2320c3bdf, type: 2}
-  - {fileID: 11400000, guid: 53843b7742ea74f358ae57f2320c3bdf, type: 2}
+  - {fileID: 11400000, guid: 8ea0a4147a33c4eae926ca9517f5d601, type: 2}
   - {fileID: 11400000, guid: 53843b7742ea74f358ae57f2320c3bdf, type: 2}
   _itemConfigs:
   - {fileID: 11400000, guid: 5554f3f4a735a4b6aa17ba5dc1ea02dc, type: 2}

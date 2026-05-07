@@ -1,6 +1,6 @@
-using Configs;
+using Model.Configs;
 
-namespace Models
+namespace Model
 {
     public class Item
     {

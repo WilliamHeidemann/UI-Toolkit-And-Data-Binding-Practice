@@ -1,9 +1,8 @@
-using System;
-using Configs;
 using Core;
+using Model.Configs;
 using UnityEngine;
 
-namespace Models
+namespace Model
 {
     public class Bag
     {

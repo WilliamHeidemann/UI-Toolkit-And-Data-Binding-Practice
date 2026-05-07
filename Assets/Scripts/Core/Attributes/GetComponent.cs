@@ -1,6 +1,6 @@
 using System;
 
-namespace Attributes
+namespace Core.Attributes
 {
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
     public class GetComponentAttribute : Attribute

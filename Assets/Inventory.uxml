@@ -1,13 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="Bag" src="project://database/Assets/Bag.uxml?fileID=9197481963319205126&amp;guid=464207b2fdcaa45a981be690ce121a24&amp;type=3#Bag"/>
     <Style src="project://database/Assets/InventoryUss.uss?fileID=7433441132597879392&amp;guid=68ad2fe2e518c40c98f18b98efa6dc14&amp;type=3#InventoryUss"/>
-    <ui:VisualElement name="Inventory" style="flex-grow: 1; flex-direction: column-reverse; align-self: flex-end; margin-top: 23px; margin-right: 23px; margin-bottom: 23px; margin-left: 23px; flex-wrap: wrap-reverse;">
-        <ui:Instance template="Bag" bag-icon="project://database/Assets/Images/inv_misc_bag_08.jpg?fileID=2800000&amp;guid=85c04af3f65854ff6a620e0902f8fde9&amp;type=3#inv_misc_bag_08"/>
-        <ui:Instance template="Bag" bag-icon="project://database/Assets/Images/inv_misc_bag_29.jpg?fileID=2800000&amp;guid=0ba975489088a4b0987a4b1326346c91&amp;type=3#inv_misc_bag_29"/>
-        <ui:Instance template="Bag" bag-icon="project://database/Assets/Images/inv_misc_bag_19.jpg?fileID=2800000&amp;guid=e74aa9a6b8c9d4fb482f9e8e1fe37a23&amp;type=3#inv_misc_bag_19"/>
-        <ui:Instance template="Bag" bag-icon="project://database/Assets/Images/inv_misc_bag_07.jpg?fileID=2800000&amp;guid=4ba0e490080074fbea6cb1657ed5d1ee&amp;type=3#inv_misc_bag_07"/>
-        <ui:Instance template="Bag" bag-icon="project://database/Assets/Images/inv_misc_bag_09.jpg?fileID=2800000&amp;guid=3fdf90258795546cfa43d3bd4d38eb87&amp;type=3#inv_misc_bag_09"/>
-    </ui:VisualElement>
+    <ui:VisualElement name="Inventory" style="flex-grow: 1; flex-direction: column-reverse; align-self: flex-end; margin-top: 23px; margin-right: 23px; margin-bottom: 23px; margin-left: 23px; flex-wrap: wrap-reverse;"/>
     <ui:VisualElement name="Panel" style="flex-grow: 0; flex-direction: row; margin-top: 16px; margin-right: 16px; margin-bottom: 16px; margin-left: 16px;">
         <ui:VisualElement style="flex-grow: 4;"/>
         <ui:VisualElement name="BagBarContainer" style="flex-grow: 0; flex-direction: row-reverse; align-self: stretch;">

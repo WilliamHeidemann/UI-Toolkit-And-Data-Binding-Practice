@@ -1,18 +1,17 @@
 using System;
-using UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Views
+namespace View
 {
     public class DragManipulator : PointerManipulator
     {
-        public event Action<SlotElement, SlotElement> OnDropPerformed;
-        
         private readonly VisualElement _root;
         
         private Vector2 _startMousePosition;
         private VisualElement _ghost;
+        
+        public Action<VisualElement, VisualElement> OnDropPerformed;
 
         public DragManipulator(VisualElement target, VisualElement root)
         {
@@ -36,6 +35,11 @@ namespace Views
 
         private void OnPointerDown(PointerDownEvent evt)
         {
+            if (target is not Button slot)
+            {
+                return;
+            }
+            
             _startMousePosition = evt.position;
 
             _ghost = CreateGhost();
@@ -68,7 +72,7 @@ namespace Views
             
             VisualElement mouseOver = target.panel.Pick(evt.position);
 
-            if (target is SlotElement sourceSlot && mouseOver is SlotElement targetSlot)
+            if (target is Button sourceSlot && mouseOver is Button targetSlot)
             {
                 OnDropPerformed?.Invoke(sourceSlot, targetSlot);
             }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Configs
+namespace Model.Configs
 {
     [CreateAssetMenu(fileName = "New Bag Config", menuName = "Bag Config")]
     public class BagConfig : ScriptableObject

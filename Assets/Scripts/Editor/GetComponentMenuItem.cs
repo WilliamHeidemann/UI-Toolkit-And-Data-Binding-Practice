@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using Attributes;
+using Core.Attributes;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;

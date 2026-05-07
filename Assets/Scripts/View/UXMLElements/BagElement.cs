@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace UI
+namespace View.UXMLElements
 {
     [UxmlElement]
     public partial class BagElement : VisualElement

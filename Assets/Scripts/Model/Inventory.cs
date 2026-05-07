@@ -1,10 +1,9 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Configs;
 using Core;
+using Model.Configs;
 
-namespace Models
+namespace Model
 {
     public class Inventory
     {
@@ -24,16 +23,10 @@ namespace Models
             return Bags[slotIdentifier.BagIndex].GetItem(slotIdentifier.SlotIndex);
         }
 
-        public void Move(SlotIdentifier source, SlotIdentifier target)
+        public void Move(Slot sourceSlot, Slot targetSlot)
         {
-            Bag sourceBag = Bags[source.BagIndex];
-            Bag targetBag = Bags[target.BagIndex];
-            
-            Option<Item> sourceItem = sourceBag.GetItem(source.SlotIndex);
-            Option<Item> targetItem = targetBag.GetItem(target.SlotIndex);
-            
-            Slot sourceSlot = sourceBag.Slots[source.SlotIndex];
-            Slot targetSlot = targetBag.Slots[target.SlotIndex];
+            Option<Item> sourceItem = sourceSlot.Item;
+            Option<Item> targetItem = targetSlot.Item;
             
             sourceSlot.SetItem(targetItem);
             targetSlot.SetItem(sourceItem);

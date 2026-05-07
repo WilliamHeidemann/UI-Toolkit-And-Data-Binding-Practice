@@ -1,9 +1,8 @@
-using System;
 using Core;
 using Unity.Properties;
 using UnityEngine;
 
-namespace Models
+namespace Model
 {
     public class Slot
     {
