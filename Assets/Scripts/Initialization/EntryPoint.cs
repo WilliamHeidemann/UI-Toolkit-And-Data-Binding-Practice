@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using Model;
 using Model.Configs;
@@ -12,17 +13,30 @@ namespace ViewModel
         [SerializeField] private InventoryView _inventoryView;
         [SerializeField] private BagConfig[] _bagConfigs;
         [SerializeField] private ItemConfig[] _itemConfigs;
+        private InventoryPresenter _inventoryPresenter;
 
         private void Start()
         {
-            Inventory inventory = new Inventory(_bagConfigs);
-            InventoryPresenter presenter = new();
-            presenter.Bind(_inventoryView, inventory);
+            Inventory inventory = new();
             
-            _itemConfigs
-                .Select(itemConfig => new Item(itemConfig))
-                .ToList()
-                .ForEach(item => inventory.TryAdd(item));
+            foreach (Bag bag in _bagConfigs.Select(config => new Bag(config)))
+            {
+                inventory.Add(bag);
+            }
+            
+            foreach (Item item in _itemConfigs.Select(itemConfig => new Item(itemConfig)))
+            {
+                inventory.TryAdd(item);
+            }
+
+            _inventoryPresenter = new InventoryPresenter();
+
+            _inventoryPresenter.Bind(_inventoryView, inventory);
+        }
+
+        private void OnDestroy()
+        {
+            _inventoryPresenter.Dispose();
         }
     }
 }

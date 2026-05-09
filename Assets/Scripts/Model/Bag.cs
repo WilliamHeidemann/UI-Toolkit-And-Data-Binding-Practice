@@ -1,3 +1,4 @@
+using System.Linq;
 using Core;
 using Model.Configs;
 using UnityEngine;
@@ -23,7 +24,7 @@ namespace Model
 
         public bool TryAdd(Item item)
         {
-            foreach (Slot s in Slots)
+            foreach (Slot s in Slots.Reverse())
             {
                 if (s.HasItem)
                 {

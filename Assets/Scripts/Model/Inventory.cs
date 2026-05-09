@@ -7,15 +7,11 @@ namespace Model
 {
     public class Inventory
     {
-        public Inventory(BagConfig[] bagConfig)
-        {
-            Bags = bagConfig.Select(config => new Bag(config)).ToList();
-        }
-
-        public List<Bag> Bags { get; }
+        public List<Bag> Bags { get; } = new();
         public int BagCount => Bags.Count;
         public int SlotCount => Bags.Sum(bag => bag.SlotCount);
-        
+        public int OccupiedSlotCount => Bags.Sum(bag => bag.Slots.Count(slot => slot.HasItem));
+        public void Add(Bag bag) => Bags.Add(bag);
         public bool TryAdd(Item item) => Bags.Any(bag => bag.TryAdd(item));
 
         public Option<Item> GetItem(SlotIdentifier slotIdentifier)

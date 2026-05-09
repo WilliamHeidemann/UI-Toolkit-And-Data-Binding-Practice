@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d51ef95f65e4d298222503a64e3aa3a, type: 3}
   m_Name: Leather Bag
   m_EditorClassIdentifier: Assembly-CSharp::BagData
-  <Icon>k__BackingField: {fileID: 21300000, guid: 85c04af3f65854ff6a620e0902f8fde9, type: 3}
+  <Icon>k__BackingField: {fileID: 21300000, guid: 0ba975489088a4b0987a4b1326346c91, type: 3}
   <Capacity>k__BackingField: 10

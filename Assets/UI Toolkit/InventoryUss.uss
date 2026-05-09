@@ -187,3 +187,10 @@
     border-top-color: rgb(0, 0, 0);
     border-bottom-color: rgb(0, 0, 0);
 }
+
+.yellow-border {
+    border-left-color: #FFEB04;
+    border-right-color: #FFEB04;
+    border-top-color: #FFEB04;
+    border-bottom-color: #FFEB04;
+}

@@ -1,5 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/InventoryUss.uss?fileID=7433441132597879392&amp;guid=68ad2fe2e518c40c98f18b98efa6dc14&amp;type=3#InventoryUss"/>
+    <Style src="project://database/Assets/UI%20Toolkit/InventoryUss.uss?fileID=7433441132597879392&amp;guid=68ad2fe2e518c40c98f18b98efa6dc14&amp;type=3#InventoryUss"/>
     <ui:VisualElement name="Inventory" style="flex-grow: 1; flex-direction: column-reverse; align-self: flex-end; margin-top: 23px; margin-right: 23px; margin-bottom: 23px; margin-left: 23px; flex-wrap: wrap-reverse;"/>
     <ui:VisualElement name="Panel" style="flex-grow: 0; flex-direction: row; margin-top: 16px; margin-right: 16px; margin-bottom: 16px; margin-left: 16px;">
         <ui:VisualElement style="flex-grow: 4;"/>

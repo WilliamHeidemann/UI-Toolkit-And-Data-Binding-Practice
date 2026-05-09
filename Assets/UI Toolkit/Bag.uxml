@@ -1,5 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:app="View.UXMLElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/InventoryUss.uss?fileID=7433441132597879392&amp;guid=68ad2fe2e518c40c98f18b98efa6dc14&amp;type=3#InventoryUss"/>
+    <Style src="project://database/Assets/UI%20Toolkit/InventoryUss.uss?fileID=7433441132597879392&amp;guid=68ad2fe2e518c40c98f18b98efa6dc14&amp;type=3#InventoryUss"/>
     <app:BagElement class="bag">
         <ui:VisualElement name="Top" class="bag-top" style="flex-direction: row;">
             <ui:VisualElement name="Bag-icon" class="bag-icon"/>
