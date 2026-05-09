@@ -44,10 +44,13 @@ namespace Presentation
                 }
             }
             
-            InputSystem.actions.FindAction("BagToggle").performed += Performed;
+            view.ToggleAll();
+            
+            InputSystem.actions.FindAction("ToggleBag").performed += ToggleBag;
+            InputSystem.actions.FindAction("ToggleAllBags").performed += ToggleAllBags;
         }
 
-        private void Performed(InputAction.CallbackContext context)
+        private void ToggleBag(InputAction.CallbackContext context)
         {
             if (!context.ReadValueAsButton()) return;
             
@@ -61,6 +64,8 @@ namespace Presentation
             
             _view.Toggle(bagIndex);
         }
+        
+        private void ToggleAllBags(InputAction.CallbackContext context) => _view.ToggleAll();
 
         private void OnDragPerformed(VisualElement source, VisualElement target)
         {
@@ -71,7 +76,8 @@ namespace Presentation
 
         public void Dispose()
         {
-            InputSystem.actions.FindAction("BagToggle").performed -= Performed;
+            InputSystem.actions.FindAction("ToggleBag").performed -= ToggleBag;
+            InputSystem.actions.FindAction("ToggleAllBags").performed -= ToggleAllBags;
         }
     }
 }

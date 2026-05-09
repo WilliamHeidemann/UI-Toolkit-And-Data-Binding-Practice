@@ -18,9 +18,8 @@ namespace Core
                 : DisplayStyle.None;
         }
 
-        public static bool IsDisplayFlex(this VisualElement element)
-        {
-            return element.style.display == DisplayStyle.Flex;
-        }
+        public static bool IsDisplayFlex(this VisualElement element) => element.style.display == DisplayStyle.Flex;
+        public static void Show(this VisualElement element) => element.style.display = DisplayStyle.Flex;
+        public static void Hide(this VisualElement element) => element.style.display = DisplayStyle.None;
     }
 }

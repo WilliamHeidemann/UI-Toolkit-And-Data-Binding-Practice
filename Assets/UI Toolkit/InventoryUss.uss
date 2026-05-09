@@ -189,8 +189,5 @@
 }
 
 .yellow-border {
-    border-left-color: #FFEB04;
-    border-right-color: #FFEB04;
-    border-top-color: #FFEB04;
-    border-bottom-color: #FFEB04;
+    border-color: #f8e958;
 }
