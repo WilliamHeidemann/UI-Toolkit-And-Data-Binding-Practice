@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Core;
 using Model;
+using Reflex.Attributes;
 using Unity.Properties;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,6 +18,15 @@ namespace Presentation
         private Inventory _inventory;
         private readonly Dictionary<VisualElement, Slot> _slots = new();
 
+        public InventoryPresenter(InventoryView view, Inventory inventory)
+        {
+            InputSystem.actions.FindAction("ToggleBag").performed += ToggleBag;
+            InputSystem.actions.FindAction("ToggleAllBags").performed += ToggleAllBags;
+            Bind(view, inventory);
+        }
+        
+        
+        // problem: the inventory has not yet been filled, so the foreach loops dont start and nothing gets bound
         public void Bind(InventoryView view, Inventory inventory)
         {
             _view = view;
@@ -43,11 +53,6 @@ namespace Presentation
                     });
                 }
             }
-            
-            view.ToggleAll();
-            
-            InputSystem.actions.FindAction("ToggleBag").performed += ToggleBag;
-            InputSystem.actions.FindAction("ToggleAllBags").performed += ToggleAllBags;
         }
 
         private void ToggleBag(InputAction.CallbackContext context)

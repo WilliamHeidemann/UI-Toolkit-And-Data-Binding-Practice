@@ -16,6 +16,11 @@ namespace View
 
         public VisualElement Root => _inventory.rootVisualElement;
 
+        private void Start()
+        {
+            ToggleAll();
+        }
+
         public BagElement AddBag()
         {
             VisualElement inventory = Root.Q<VisualElement>("Inventory");

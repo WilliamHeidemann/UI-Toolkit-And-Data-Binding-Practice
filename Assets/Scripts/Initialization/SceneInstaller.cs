@@ -1,4 +1,5 @@
 using Model;
+using Presentation;
 using Reflex.Core;
 using Reflex.Enums;
 using UnityEngine;
@@ -13,8 +14,9 @@ namespace Initialization
         
         public void InstallBindings(ContainerBuilder containerBuilder)
         {
-            containerBuilder.RegisterType(typeof(Inventory), Lifetime.Scoped, Resolution.Lazy);
+            containerBuilder.RegisterType(typeof(Inventory), Lifetime.Scoped, Resolution.Eager);
             containerBuilder.RegisterValue(_inventoryView);
+            containerBuilder.RegisterType(typeof(InventoryPresenter), Lifetime.Scoped, Resolution.Eager);
         }
     }
 }

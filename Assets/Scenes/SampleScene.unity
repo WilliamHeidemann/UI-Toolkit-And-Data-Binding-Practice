@@ -601,7 +601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcee0751f99c476e88a75ed23bc81f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Presenters.EntryPoint
-  _inventoryView: {fileID: 1188677220}
   _bagConfigs:
   - {fileID: 11400000, guid: 53843b7742ea74f358ae57f2320c3bdf, type: 2}
   - {fileID: 11400000, guid: 8ea0a4147a33c4eae926ca9517f5d601, type: 2}
